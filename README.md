@@ -1,7 +1,7 @@
 ## Folder structure (not exhaustive but shows the workflow):
 
 react-tooltip(base)/<br/>
-    public/<br/>
+&emsp;    public/<br/>
     src/<br/>
         components/<br/>
         containers/<br/>
