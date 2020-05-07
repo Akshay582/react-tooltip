@@ -1,12 +1,12 @@
 ## Folder structure (not exhaustive but shows the workflow):
 
 react-tooltip(base)/<br/>
-    public/
-    src/
-        components/
-        containers/
-        index.js
-    package.json
+    public/<br/>
+    src/<br/>
+        components/<br/>
+        containers/<br/>
+        index.js<br/>
+    package.json<br/>
     readme.md
 
 ### Summary
