@@ -57,11 +57,11 @@ const style = {
     },
     left: {
         position: 'absolute',
-        bottom: "30vh"
+        bottom: "40vh"
     },
     right: {
         position: 'absolute',
-        bottom: "30vh",
+        bottom: "40vh",
         right:0
     }
 };
