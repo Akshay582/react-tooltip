@@ -2,12 +2,12 @@
 
 react-tooltip(base)/<br/>
 &emsp;    public/<br/>
-    src/<br/>
-        components/<br/>
-        containers/<br/>
-        index.js<br/>
-    package.json<br/>
-    readme.md
+&emsp;    src/<br/>
+&emsp;&emsp;        components/<br/>
+&emsp;&emsp;        containers/<br/>
+&emsp;&emsp;        index.js<br/>
+&emsp;    package.json<br/>
+&emsp;    readme.md
 
 ### Summary
 
