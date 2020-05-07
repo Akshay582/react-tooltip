@@ -1,6 +1,6 @@
 ## Folder structure (not exhaustive but shows the workflow):
 
-react-tooltip(base)/
+react-tooltip(base)/<br/>
     public/
     src/
         components/
