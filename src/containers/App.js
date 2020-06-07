@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
 import Window from '../components/Window';
 import SelectionInput from '../components/SelectionInput';
 
