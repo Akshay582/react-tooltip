@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import './Window.css';
 
-// import Button from './Button';
-
 class Window extends Component {
     constructor( props ) {
         super( props );
@@ -20,34 +18,37 @@ class Window extends Component {
         console.log( this.state.positions.positionPassed );
     }
     render() {
+        const { positionPassed } = this.state.positions;
+        let button;
+        if ( positionPassed === undefined ) {
+            button = <div></div>;
+        } else if ( positionPassed[ 0 ] === "left" ) {
+            button = <button type="button"
+                className="btn btn-primary btn-lg"
+                id="tooltip"
+                style={style.left}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button>;
+        } else if ( positionPassed[ 0 ] === "right" ) {
+            button = <button type="button"
+                className="btn btn-primary btn-lg"
+                id="tooltip"
+                style={style.right}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button>;
+        } else if ( positionPassed[ 0 ] === "top" ) {
+            button = <button type="button"
+                className="btn btn-primary btn-lg"
+                id="tooltip"
+                style={style.top}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button>;
+        } else if ( positionPassed[ 0 ] === "bottom" ) {
+            button = <button type="button"
+                className="btn btn-primary btn-lg"
+                id="tooltip"
+                style={style.bottom}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button>;
+        }
+
         return (
             <div
                 className="container"
-                style={{ display: "flex" }}>
-                {
-                    this.state.positions.positionPassed === undefined ?
-                        <div></div> :
-                        this.state.positions.positionPassed[ 0 ] === "left" ?
-                            <button type="button"
-                                className="btn btn-primary btn-lg"
-                                id="tooltip"
-                                style={style.left}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button> :
-                            this.state.positions.positionPassed[ 0 ] === "right" ?
-                                <button type="button"
-                                    className="btn btn-primary btn-lg"
-                                    id="tooltip"
-                                    style={style.right}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button> :
-                                this.state.positions.positionPassed[ 0 ] === "top" ?
-                                    <button type="button"
-                                        className="btn btn-primary btn-lg"
-                                        id="tooltip"
-                                        style={style.top}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button> :
-                                    this.state.positions.positionPassed[ 0 ] === "bottom" ?
-                                        <button type="button"
-                                            className="btn btn-primary btn-lg" id="tooltip"
-                                            style={style.bottom}>&emsp;Press&emsp; <span className="tooltip-text">Don't Press</span></button> :
-                                        <div></div>
-                }
+                style={style.container}>
+                {button}
             </div>
         )
     }
@@ -70,6 +71,9 @@ const style = {
         position: 'absolute',
         bottom: "40vh",
         right: "10vw"
+    },
+    container: {
+        display: 'flex'
     }
 };
 

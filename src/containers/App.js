@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import './App.css';
 import Window from '../components/Window';
-import Position from '../components/Position';
+import SelectionInput from '../components/SelectionInput';
 
 class App extends Component {
   constructor() {
@@ -10,14 +10,14 @@ class App extends Component {
       value: []
     }
   }
-  handlePosition = posArray => {
+  handleSelectionInput = posArray => {
     this.setState( { value: posArray } );
   }
   render() {
     return (
       <div className="App">
-        <Position
-          onSelectPosition={this.handlePosition} />
+        <SelectionInput
+          onSelectInput={this.handleSelectionInput} />
         <Window
           positionPassed={this.state.value} />
       </div>
