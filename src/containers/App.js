@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 // import './App.css';
-import Tooltip from '../components/Tooltip';
+import Window from '../components/Window';
 import Position from '../components/Position';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       value: []
     }
   }
   handlePosition = posArray => {
-    this.setState({value: posArray});
+    this.setState( { value: posArray } );
   }
   render() {
     return (
       <div className="App">
         <Position
-        onSelectPosition={this.handlePosition}/>
-        <Tooltip
-        positionPassed={this.state.value}/>
+          onSelectPosition={this.handlePosition} />
+        <Window
+          positionPassed={this.state.value} />
       </div>
     )
   }
